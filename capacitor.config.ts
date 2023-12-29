@@ -21,7 +21,15 @@ const config: CapacitorConfig = {
         LocalNotifications: {
             smallIcon: "ic_stat_notifications_active",
             iconColor: "#0d6efd",
-            sound: "groscan_notification",
+            sound: "groscan_notification.wav",
+        },
+        BackgroundRunner: {
+            label: "me.kaush.groscan.background.task.check_expiry",
+            src: "background.js",
+            event: "expiryCheckEvent",
+            repeat: true,
+            interval: 1,
+            autoStart: true,
         },
     },
 };
