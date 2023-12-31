@@ -15,8 +15,9 @@ export default function handler(
 
     try {
         // @ts-ignore
-        const authHeader = (req.headers.get("authorization") as string) ?? "";
-        if (!env.CRON_SECRET || authHeader !== `Bearer ${env.CRON_SECRET}`) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const authHeader = req.headers.get("authorization") ?? "";
+        if (authHeader !== `Bearer ${env.CRON_SECRET}`) {
             return res.status(401).json({ message: "UNAUTHORIZED" });
         }
 
