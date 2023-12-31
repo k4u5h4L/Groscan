@@ -25,9 +25,8 @@ export default function handler(
             message: `Successfully triggered cronjob`,
         });
     } catch (err) {
-        logger.error(err);
-        return res
-            .status(500)
-            .json({ message: "Error in running ghe cron job" });
+        logger.error("Error in checking cron auth");
+        console.error(err);
+        res.status(500).json({ message: "Error in running ghe cron job" });
     }
 }
