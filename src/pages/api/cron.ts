@@ -14,9 +14,7 @@ export default function handler(
     logger.info("Hit CRON API");
 
     try {
-        // @ts-ignore
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        const authHeader = req.headers.get("authorization") ?? "";
+        const authHeader = req.headers.authorization ?? "";
         if (authHeader !== `Bearer ${env.CRON_SECRET}`) {
             return res.status(401).json({ message: "UNAUTHORIZED" });
         }
@@ -27,6 +25,6 @@ export default function handler(
     } catch (err) {
         logger.error("Error in checking cron auth");
         console.error(err);
-        res.status(500).json({ message: "Error in running ghe cron job" });
+        res.status(500).json({ message: "Error in running the cron job" });
     }
 }
