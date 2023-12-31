@@ -24,11 +24,11 @@ const config: CapacitorConfig = {
             sound: "groscan_notification.wav",
         },
         BackgroundRunner: {
-            label: "me.kaush.groscan.background.task.check_expiry",
+            label: "me.kaush.groscan.background",
             src: "background.js",
             event: "expiryCheckEvent",
             repeat: true,
-            interval: 1,
+            interval: 15,
             autoStart: true,
         },
     },

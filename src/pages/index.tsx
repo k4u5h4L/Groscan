@@ -10,9 +10,10 @@ export default function Home() {
         await LocalNotifications.schedule({
             notifications: [
                 {
-                    id: 1,
+                    id: 5,
                     title: "Testing title",
                     body: "Testing body sdsdgukgdusadjasgdaskhdaislhdlba,s",
+                    schedule: { at: new Date(Date.now() + 2 * 1000) },
                 },
             ],
         });

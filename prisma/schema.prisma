@@ -113,3 +113,13 @@ enum Status {
     EXPIRED
     CONSUMED
 }
+
+model Keys {
+    id     String  @id @default(auto()) @map("_id") @db.ObjectId
+    name   String
+    secret String
+    desc   String?
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}

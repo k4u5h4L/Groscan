@@ -38,6 +38,7 @@ const config = {
         "@next/next/no-sync-scripts": "off",
         "@next/next/no-img-element": "off",
         "@typescript-eslint/require-await": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
     },
 };
 
