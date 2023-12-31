@@ -26,5 +26,8 @@ export default function handler(
         });
     } catch (err) {
         logger.error(err);
+        return res
+            .status(500)
+            .json({ message: "Error in running ghe cron job" });
     }
 }
