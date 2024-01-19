@@ -16,7 +16,7 @@ export const Query = queryType({
         t.list.field("getUserGroceries", {
             type: Grocery,
             description:
-                "Get all groceries of the user from the search string. Leave blank to get all.",
+                'Get all groceries of the user from the search string. Leave blank to get all. Expiry field takes "UPCOMING", "EXPIRED" and "ALL" values.',
             args: {
                 page: intArg(),
                 itemsPerPage: intArg(),
