@@ -4,9 +4,9 @@
     "private": true,
     "scripts": {
         "build": "next build",
-        "dev": "next dev",
+        "dev": "NODE_ENV=development next dev",
         "lint": "next lint",
-        "start": "next start",
+        "start": "NODE_ENV=production next start",
         "postinstall": "prisma generate",
         "export": "next build && next export",
         "cap:sync": "npx cap sync android",

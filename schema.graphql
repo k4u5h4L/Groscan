@@ -2,16 +2,50 @@
 ### Do not make changes to this file directly
 
 
+type Category {
+  desc: String
+  groceries: User
+  icon: String
+  id: String
+  name: String
+  user: User
+}
+
+type Grocery {
+  barcode: String
+  categories: Category
+  desc: String
+  expiry: String
+  id: String
+  image: String
+  manufactured: String
+  name: String
+  status: String
+  user: User
+}
+
 type Mutation {
   """Health Check GraphQL Mutation resolver.."""
   healthcheck: Test
 }
 
 type Query {
+  """
+  Get all groceries of the user from the search string. Leave blank to get all.
+  """
+  getUserGroceries(expiry: String, itemsPerPage: Int, page: Int, search: String): [Grocery]
+
   """Health Check GraphQL Query resolver."""
   healthcheck: Test
 }
 
 type Test {
   message: String
+}
+
+type User {
+  email: String
+  id: String
+  image: String
+  name: String
 }

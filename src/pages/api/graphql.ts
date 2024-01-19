@@ -8,6 +8,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import type { GraphQlContextType } from "~/@types/GraphQL";
 import { prisma } from "~/server/db/client";
 import { env } from "~/env.mjs";
+import { getServerSession } from "next-auth";
+import { authOptions } from "~/server/security/auth";
 
 const server = new ApolloServer({
     schema,
@@ -24,10 +26,10 @@ const server = new ApolloServer({
 export default startServerAndCreateNextHandler(server, {
     context: async (
         req: NextApiRequest,
-        _res: NextApiResponse
+        res: NextApiResponse
     ): Promise<GraphQlContextType> => {
         // get user's session
-        const session = await getSession({ req });
+        const session = await getServerSession(req, res, authOptions);
 
         if (!session && env.NODE_ENV != "development") {
             throw AuthenticationError;

@@ -28,10 +28,32 @@ export interface NexusGenScalars {
 }
 
 export interface NexusGenObjects {
+  Category: { // root type
+    desc?: string | null; // String
+    icon?: string | null; // String
+    id?: string | null; // String
+    name?: string | null; // String
+  }
+  Grocery: { // root type
+    barcode?: string | null; // String
+    desc?: string | null; // String
+    expiry?: string | null; // String
+    id?: string | null; // String
+    image?: string | null; // String
+    manufactured?: string | null; // String
+    name?: string | null; // String
+    status?: string | null; // String
+  }
   Mutation: {};
   Query: {};
   Test: { // root type
     message?: string | null; // String
+  }
+  User: { // root type
+    email?: string | null; // String
+    id?: string | null; // String
+    image?: string | null; // String
+    name?: string | null; // String
   }
 }
 
@@ -46,30 +68,92 @@ export type NexusGenRootTypes = NexusGenObjects
 export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
+  Category: { // field return type
+    desc: string | null; // String
+    groceries: NexusGenRootTypes['User'] | null; // User
+    icon: string | null; // String
+    id: string | null; // String
+    name: string | null; // String
+    user: NexusGenRootTypes['User'] | null; // User
+  }
+  Grocery: { // field return type
+    barcode: string | null; // String
+    categories: NexusGenRootTypes['Category'] | null; // Category
+    desc: string | null; // String
+    expiry: string | null; // String
+    id: string | null; // String
+    image: string | null; // String
+    manufactured: string | null; // String
+    name: string | null; // String
+    status: string | null; // String
+    user: NexusGenRootTypes['User'] | null; // User
+  }
   Mutation: { // field return type
     healthcheck: NexusGenRootTypes['Test'] | null; // Test
   }
   Query: { // field return type
+    getUserGroceries: Array<NexusGenRootTypes['Grocery'] | null> | null; // [Grocery]
     healthcheck: NexusGenRootTypes['Test'] | null; // Test
   }
   Test: { // field return type
     message: string | null; // String
   }
+  User: { // field return type
+    email: string | null; // String
+    id: string | null; // String
+    image: string | null; // String
+    name: string | null; // String
+  }
 }
 
 export interface NexusGenFieldTypeNames {
+  Category: { // field return type name
+    desc: 'String'
+    groceries: 'User'
+    icon: 'String'
+    id: 'String'
+    name: 'String'
+    user: 'User'
+  }
+  Grocery: { // field return type name
+    barcode: 'String'
+    categories: 'Category'
+    desc: 'String'
+    expiry: 'String'
+    id: 'String'
+    image: 'String'
+    manufactured: 'String'
+    name: 'String'
+    status: 'String'
+    user: 'User'
+  }
   Mutation: { // field return type name
     healthcheck: 'Test'
   }
   Query: { // field return type name
+    getUserGroceries: 'Grocery'
     healthcheck: 'Test'
   }
   Test: { // field return type name
     message: 'String'
   }
+  User: { // field return type name
+    email: 'String'
+    id: 'String'
+    image: 'String'
+    name: 'String'
+  }
 }
 
 export interface NexusGenArgTypes {
+  Query: {
+    getUserGroceries: { // args
+      expiry?: string | null; // String
+      itemsPerPage?: number | null; // Int
+      page?: number | null; // Int
+      search?: string | null; // String
+    }
+  }
 }
 
 export interface NexusGenAbstractTypeMembers {
