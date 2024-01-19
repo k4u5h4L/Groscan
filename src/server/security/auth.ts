@@ -46,7 +46,8 @@ export const authOptions: NextAuthOptions = {
         }),
     },
     adapter: PrismaAdapter(prisma),
-    debug: env.NODE_ENV === "development",
+    // debug: env.NODE_ENV === "development",
+    debug: false,
     secret: env.AUTH_SECRET,
     jwt: {
         secret: env.JWT_SECRET,
