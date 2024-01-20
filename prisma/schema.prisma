@@ -81,7 +81,7 @@ model Grocery {
     desc         String?
     status       Status   @default(UPCOMING)
     userId       String   @db.ObjectId
-    image        String
+    image        String   @default("")
     manufactured DateTime @default(now())
     expiry       DateTime
 

@@ -1,6 +1,7 @@
 import { objectType } from "nexus";
 import { User } from "./User";
 import type { GraphQlContextType } from "~/@types/GraphQL";
+import { Grocery } from "./Grocery";
 
 export const Category = objectType({
     name: "Category",
@@ -23,10 +24,10 @@ export const Category = objectType({
                 });
             },
         });
-        t.field("groceries", {
-            type: User,
+        t.list.field("groceries", {
+            type: Grocery,
             resolve: async (parent, args, ctx: GraphQlContextType, _info) => {
-                return await ctx.prisma.grocery.findFirst({
+                return await ctx.prisma.grocery.findMany({
                     where: {
                         categories: {
                             some: {

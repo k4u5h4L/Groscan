@@ -99,11 +99,13 @@ export const getUserGroceriesResolver: FieldResolver<
                         {
                             name: {
                                 contains: search,
+                                mode: "insensitive",
                             },
                         },
                         {
                             desc: {
                                 contains: search,
+                                mode: "insensitive",
                             },
                         },
                     ],
@@ -123,6 +125,20 @@ export const getUserGroceriesResolver: FieldResolver<
                     expiry: {
                         lt: new Date(),
                     },
+                    OR: [
+                        {
+                            name: {
+                                contains: search,
+                                mode: "insensitive",
+                            },
+                        },
+                        {
+                            desc: {
+                                contains: search,
+                                mode: "insensitive",
+                            },
+                        },
+                    ],
                 },
                 orderBy: {
                     createdAt: "asc",
@@ -141,11 +157,13 @@ export const getUserGroceriesResolver: FieldResolver<
                     {
                         name: {
                             contains: search,
+                            mode: "insensitive",
                         },
                     },
                     {
                         desc: {
                             contains: search,
+                            mode: "insensitive",
                         },
                     },
                 ],

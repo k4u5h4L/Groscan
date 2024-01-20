@@ -7,7 +7,7 @@ type ReturnType = { search: string; status: boolean };
  */
 export const getSearchField = (search: string): ReturnType => {
     try {
-        return { search: search.trim().toLowerCase(), status: !!search };
+        return { search: search.trim(), status: !!search };
     } catch (err) {
         return { search: search, status: false };
     }

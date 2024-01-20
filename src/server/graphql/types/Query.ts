@@ -3,6 +3,8 @@ import { Test } from "./objectTypes/Test";
 import { healthCheckQueryResolver } from "../resolvers/HealthCheckResolver";
 import { Grocery } from "./objectTypes/Grocery";
 import { getUserGroceriesResolver } from "../resolvers/Grocery/GetUserGroceriesResolver";
+import { Category } from "./objectTypes";
+import { getUserCategoriesResolver } from "../resolvers/Category/GetUserCategoriesResolver";
 
 export const Query = queryType({
     definition(t) {
@@ -21,9 +23,21 @@ export const Query = queryType({
                 page: intArg(),
                 itemsPerPage: intArg(),
                 search: stringArg(),
-                expiry: stringArg(),
+                expiry: nonNull(stringArg()),
             },
             resolve: getUserGroceriesResolver,
+        });
+
+        t.list.field("getUserCategories", {
+            type: Category,
+            description:
+                "Get all categories of the user from the search string. Leave blank to get all.",
+            args: {
+                page: intArg(),
+                itemsPerPage: intArg(),
+                search: stringArg(),
+            },
+            resolve: getUserCategoriesResolver,
         });
     },
 });

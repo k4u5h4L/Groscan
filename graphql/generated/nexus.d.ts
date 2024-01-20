@@ -70,7 +70,7 @@ export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 export interface NexusGenFieldTypes {
   Category: { // field return type
     desc: string | null; // String
-    groceries: NexusGenRootTypes['User'] | null; // User
+    groceries: Array<NexusGenRootTypes['Grocery'] | null> | null; // [Grocery]
     icon: string | null; // String
     id: string | null; // String
     name: string | null; // String
@@ -78,7 +78,7 @@ export interface NexusGenFieldTypes {
   }
   Grocery: { // field return type
     barcode: string | null; // String
-    categories: NexusGenRootTypes['Category'] | null; // Category
+    categories: Array<NexusGenRootTypes['Category'] | null> | null; // [Category]
     desc: string | null; // String
     expiry: string | null; // String
     id: string | null; // String
@@ -89,9 +89,11 @@ export interface NexusGenFieldTypes {
     user: NexusGenRootTypes['User'] | null; // User
   }
   Mutation: { // field return type
+    addGrocery: NexusGenRootTypes['Grocery'] | null; // Grocery
     healthcheck: NexusGenRootTypes['Test'] | null; // Test
   }
   Query: { // field return type
+    getUserCategories: Array<NexusGenRootTypes['Category'] | null> | null; // [Category]
     getUserGroceries: Array<NexusGenRootTypes['Grocery'] | null> | null; // [Grocery]
     healthcheck: NexusGenRootTypes['Test'] | null; // Test
   }
@@ -109,7 +111,7 @@ export interface NexusGenFieldTypes {
 export interface NexusGenFieldTypeNames {
   Category: { // field return type name
     desc: 'String'
-    groceries: 'User'
+    groceries: 'Grocery'
     icon: 'String'
     id: 'String'
     name: 'String'
@@ -128,9 +130,11 @@ export interface NexusGenFieldTypeNames {
     user: 'User'
   }
   Mutation: { // field return type name
+    addGrocery: 'Grocery'
     healthcheck: 'Test'
   }
   Query: { // field return type name
+    getUserCategories: 'Category'
     getUserGroceries: 'Grocery'
     healthcheck: 'Test'
   }
@@ -146,9 +150,24 @@ export interface NexusGenFieldTypeNames {
 }
 
 export interface NexusGenArgTypes {
+  Mutation: {
+    addGrocery: { // args
+      barcode: string; // String!
+      desc: string; // String!
+      expiry: string; // String!
+      image?: string | null; // String
+      manufactured?: string | null; // String
+      name: string; // String!
+    }
+  }
   Query: {
+    getUserCategories: { // args
+      itemsPerPage?: number | null; // Int
+      page?: number | null; // Int
+      search?: string | null; // String
+    }
     getUserGroceries: { // args
-      expiry?: string | null; // String
+      expiry: string; // String!
       itemsPerPage?: number | null; // Int
       page?: number | null; // Int
       search?: string | null; // String

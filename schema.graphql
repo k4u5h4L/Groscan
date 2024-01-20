@@ -4,7 +4,7 @@
 
 type Category {
   desc: String
-  groceries: User
+  groceries: [Grocery]
   icon: String
   id: String
   name: String
@@ -13,7 +13,7 @@ type Category {
 
 type Grocery {
   barcode: String
-  categories: Category
+  categories: [Category]
   desc: String
   expiry: String
   id: String
@@ -25,15 +25,23 @@ type Grocery {
 }
 
 type Mutation {
+  """Add a new grocery for the user."""
+  addGrocery(barcode: String!, desc: String!, expiry: String!, image: String, manufactured: String, name: String!): Grocery
+
   """Health Check GraphQL Mutation resolver.."""
   healthcheck: Test
 }
 
 type Query {
   """
-  Get all groceries of the user from the search string. Leave blank to get all.
+  Get all categories of the user from the search string. Leave blank to get all.
   """
-  getUserGroceries(expiry: String, itemsPerPage: Int, page: Int, search: String): [Grocery]
+  getUserCategories(itemsPerPage: Int, page: Int, search: String): [Category]
+
+  """
+  Get all groceries of the user from the search string. Leave blank to get all. Expiry field takes "UPCOMING", "EXPIRED" and "ALL" values.
+  """
+  getUserGroceries(expiry: String!, itemsPerPage: Int, page: Int, search: String): [Grocery]
 
   """Health Check GraphQL Query resolver."""
   healthcheck: Test

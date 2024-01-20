@@ -28,10 +28,10 @@ export const Grocery = objectType({
                 });
             },
         });
-        t.field("categories", {
+        t.list.field("categories", {
             type: Category,
             resolve: async (parent, args, ctx: GraphQlContextType, _info) => {
-                return await ctx.prisma.category.findFirst({
+                return await ctx.prisma.category.findMany({
                     where: {
                         groceries: {
                             some: {
