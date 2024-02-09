@@ -50,6 +50,7 @@ export const env = createEnv({
     client: {
         // NEXT_PUBLIC_CLIENTVAR: z.string(),
         NEXT_PUBLIC_SERVER_URL: z.string().url(),
+        NEXT_PUBLIC_APOLLO_CLIENT_URL: z.string().url(),
     },
 
     /**
@@ -71,6 +72,8 @@ export const env = createEnv({
         CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
         CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
         VERCEL_URL:
+            process.env.VERCEL_URL ?? process.env.NEXT_PUBLIC_SERVER_URL,
+        NEXT_PUBLIC_APOLLO_CLIENT_URL:
             process.env.VERCEL_URL ?? process.env.NEXT_PUBLIC_SERVER_URL,
         CRON_SECRET: process.env.CRON_SECRET,
         TESTING_EMAIL: process.env.TESTING_EMAIL,

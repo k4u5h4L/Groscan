@@ -5,8 +5,15 @@ import { SessionProvider } from "next-auth/react";
 import type { AppProps /*, AppContext */ } from "next/app";
 
 import NextNprogress from "nextjs-progressbar";
+import { useApollo } from "~/server/graphql/apolloClient";
+import RouteGuard from "~/components/RouteGuard/RouteGuard";
+import { ApolloProvider } from "@apollo/client";
+import { usePreserveScroll } from "~/hooks/usePreserveScroll";
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const client = useApollo();
+    usePreserveScroll();
+
     return (
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         <SessionProvider session={pageProps.session} refetchInterval={0}>
@@ -179,7 +186,17 @@ function MyApp({ Component, pageProps }: AppProps) {
                 height={3}
                 options={{ showSpinner: false }}
             />
-            <Component {...pageProps} />
+            <RouteGuard>
+                <ApolloProvider client={client}>
+                    <div
+                        style={{
+                            WebkitTapHighlightColor: "transparent",
+                        }}
+                    >
+                        <Component {...pageProps} />
+                    </div>
+                </ApolloProvider>
+            </RouteGuard>
         </SessionProvider>
     );
     // }

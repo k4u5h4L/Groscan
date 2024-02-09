@@ -1,4 +1,12 @@
+import { useSession } from "next-auth/react";
+
 const Sidebar = () => {
+    const { data: session, status } = useSession();
+
+    if (status != "authenticated") {
+        return null;
+    }
+
     return (
         // TODO: Add next/link to all the hyperlinks
         <>
@@ -17,12 +25,12 @@ const Sidebar = () => {
 
                     <a href="#" className="icontext">
                         <img
-                            src="images/avatars/1.jpg"
+                            src={session.user.image ?? ""}
                             className="icon avatar-sm"
                             alt=""
                         />
                         <div className="text">
-                            <h6 className="mb-0">Hi Jackson</h6>
+                            <h6 className="mb-0">Hi, {session.user.name}</h6>
                             <small>My profile</small>
                         </div>
                     </a>

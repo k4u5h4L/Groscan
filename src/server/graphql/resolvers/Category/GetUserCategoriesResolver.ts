@@ -26,11 +26,6 @@ export const getUserCategoriesResolver: FieldResolver<
 
     if (!status) {
         return await ctx.prisma.category.findMany({
-            where: {
-                user: {
-                    email: getUserEmail(ctx),
-                },
-            },
             orderBy: {
                 createdAt: "asc",
             },
@@ -40,9 +35,6 @@ export const getUserCategoriesResolver: FieldResolver<
     } else {
         return ctx.prisma.category.findMany({
             where: {
-                user: {
-                    email: getUserEmail(ctx),
-                },
                 OR: [
                     {
                         name: {

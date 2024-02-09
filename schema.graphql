@@ -8,7 +8,6 @@ type Category {
   icon: String
   id: String
   name: String
-  user: User
 }
 
 type Grocery {

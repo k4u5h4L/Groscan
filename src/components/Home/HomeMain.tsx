@@ -1,3 +1,5 @@
+import HomeCategory from "../containers/Home/HomeCategory/HomeCategory";
+
 const HomeMain = () => {
     return (
         <>
@@ -62,91 +64,7 @@ const HomeMain = () => {
                     </div>
                 </section>
 
-                <section className="px-3 pt-3">
-                    <ul className="row">
-                        <li className="col-4">
-                            <a href="#" className="item-category-grid">
-                                <span className="icon-wrap">
-                                    <img
-                                        className="icon"
-                                        height="32"
-                                        src="images/icons/category-blue/shirt.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <small className="text"> Shirts</small>
-                            </a>
-                        </li>
-                        <li className="col-4">
-                            <a href="#" className="item-category-grid">
-                                <span className="icon-wrap">
-                                    <img
-                                        className="icon"
-                                        height="32"
-                                        src="images/icons/category-blue/shoe-lady.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <small className="text"> Women</small>
-                            </a>
-                        </li>
-                        <li className="col-4">
-                            <a href="#" className="item-category-grid">
-                                <span className="icon-wrap">
-                                    <img
-                                        className="icon"
-                                        height="32"
-                                        src="images/icons/category-blue/toy.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <small className="text">
-                                    {" "}
-                                    Kid&apos;s &amp; toys{" "}
-                                </small>
-                            </a>
-                        </li>
-                        <li className="col-4">
-                            <a href="#" className="item-category-grid">
-                                <span className="icon-wrap">
-                                    <img
-                                        className="icon"
-                                        height="32"
-                                        src="images/icons/category-blue/watch.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <small className="text"> Accesories </small>
-                            </a>
-                        </li>
-                        <li className="col-4">
-                            <a href="#" className="item-category-grid">
-                                <span className="icon-wrap">
-                                    <img
-                                        className="icon"
-                                        height="32"
-                                        src="images/icons/category-blue/book.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <small className="text"> Education </small>
-                            </a>
-                        </li>
-                        <li className="col-4">
-                            <a href="#" className="item-category-grid">
-                                <span className="icon-wrap">
-                                    <img
-                                        className="icon"
-                                        height="32"
-                                        src="images/icons/category-blue/spa.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <small className="text"> Flowers </small>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
+                <HomeCategory />
 
                 <section>
                     <h5 className="title-section">New arrival</h5>

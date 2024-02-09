@@ -74,7 +74,6 @@ export interface NexusGenFieldTypes {
     icon: string | null; // String
     id: string | null; // String
     name: string | null; // String
-    user: NexusGenRootTypes['User'] | null; // User
   }
   Grocery: { // field return type
     barcode: string | null; // String
@@ -115,7 +114,6 @@ export interface NexusGenFieldTypeNames {
     icon: 'String'
     id: 'String'
     name: 'String'
-    user: 'User'
   }
   Grocery: { // field return type name
     barcode: 'String'
