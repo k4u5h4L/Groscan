@@ -16,7 +16,7 @@
 
 <br>
 <p align="center">
-<img width="460px" src="assets/logo.png" alt="Groscan"></img>
+<img width="460px" src="public/logo.png" alt="Groscan"></img>
 </p><br>
 
 ## Technologies used:
