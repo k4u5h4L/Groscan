@@ -10,11 +10,12 @@ from llm.serializers import RequestSerializer
 from server import settings
 # Create your views here.
 
-cache_timeout = 60
+cache_timeout = 60 * 60 * 15
 
 
 @api_view(['GET'])
 # @ratelimit(key='ip', rate='500/h')
+@cache_page(cache_timeout)
 def api_overview(request):
     api_urls = {
         'Get instructions': 'GET /',
@@ -27,11 +28,13 @@ def api_overview(request):
 @api_view(['POST'])
 # @ratelimit(key='ip', rate='500/h')
 def get_recipes(request):
-    asset = RequestSerializer(data=request.data)
+    # asset = RequestSerializer(data=request.data)
+    print(request.data)
 
-    if asset.is_valid():
-        asset.save(created_by=request.user, update_by=request.user)
-        return Response(asset.data, status=status.HTTP_201_CREATED)
-    else:
-        print(asset.errors)
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+    # if asset.is_valid():
+    #     asset.save(created_by=request.user, update_by=request.user)
+    #     return Response(asset.data, status=status.HTTP_201_CREATED)
+    # else:
+    #     print(asset.errors)
+    #     return Response(status=status.HTTP_400_BAD_REQUEST)
+    return Response(request.data, status=status.HTTP_201_CREATED)

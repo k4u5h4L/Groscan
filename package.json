@@ -23,7 +23,7 @@
         "studio:prisma": "prisma studio",
         "format:prisma": "prisma format",
         "seed:prisma": "prisma db seed",
-        "ai:dev": "python3 ai/manage.py"
+        "ai:dev": "python3 ai/manage.py runserver"
     },
     "prisma": {
         "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} src/server/db/seed.ts"
