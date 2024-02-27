@@ -27,3 +27,5 @@ config/
 .idea/
 venv/
 .env
+cache/
+db.sqlite3

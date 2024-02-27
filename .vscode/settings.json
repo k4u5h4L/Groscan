@@ -6,5 +6,8 @@
     },
     "[xml]": {
         "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
     }
 }
