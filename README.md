@@ -1,32 +1,80 @@
-# Create T3 App
+<h1 align="center">Groscan</h1></br>
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+<p align="center">
+:leafy_green:  A JAM stack PWA, grocery management hybrid app built with Capacitorjs, React, TypeScript, Next.js, Prisma and MongoDB. :shopping_cart:
+</p>
+<br>
 
-## What's next? How do I make an app with this?
+<p align="center">
+  <a href="#"><img alt="built with love" src="https://forthebadge.com/images/badges/built-with-love.svg"/></a>
+  <a href="#"><img alt="js Badge" src="https://forthebadge.com/images/badges/made-with-typescript.svg"/></a>
+  <a href="https://github.com/k4u5h4L"><img alt="k4u5h4L GitHub badge" height="37" src="https://badgen.net/badge/GitHub/k4u5h4L?icon=github&color=24292e"/></a>
+  <a href="#"><img alt="machine Badge" height="37" src="https://forthebadge.com/images/badges/works-on-my-machine.svg"/></a>
+  <a href="#"><img alt="not bug but feature" height="37" src="https://forthebadge.com/images/badges/not-a-bug-a-feature.svg"/></a>
+  <a href="#"><img alt="spaghetti Badge" src="https://forthebadge.com/images/badges/contains-tasty-spaghetti-code.svg"/></a>
+</p>
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+<br>
+<p align="center">
+<img width="460px" src="assets/logo.png" alt="Groscan"></img>
+</p><br>
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Technologies used:
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+-   React as the UI library with Typescript.
 
-## Learn More
+-   Next.js as the React framework for extra features and API backend.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+-   GraphQL as the API language.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+-   MongoDB as the DB.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+-   Prisma as the ODM.
 
-## How do I deploy this?
+-   NextAuth as the authentication backend with OTP logins.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+-   Capacitor.js as the hybrid app framework to run the platform on Android and iOS.
 
+-   Python + huggingface to train and fine tune text generation LLMs.
 
-### Notes
-- Dissertation name: Bootstraping a production-level project with full stack technologies
+-   Python + Django to wrap the model inferences.
+
+## Prerequisites:
+
+-   Node.js and yarn installed.
+
+-   MongoDB installed and the daemon running locally or hosted on the cloud.
+
+## To run:
+
+-   Clone and cd into the repo.
+
+```
+git clone https://github.com/k4u5h4L/Groscan.git && cd Groscan
+```
+
+-   Install the dependencies
+
+```
+yarn install
+```
+
+-   Create a new file called `.env.local` and fill in variables and keys from different providers from the `.env.example` file.
+
+-   Now with all the API keys and the backend server running, run development server for the client.
+
+```
+yarn dev
+```
+
+-   Now visit the location [localhost:3000](http://localhost:3000) to check out the site!
+
+## Note:
+
+-   This project is for learning purposes only, and not for commercial use.
+
+-   Any contribution is welcome. You may fork the repo and issue a PR.
+
+<!-- ## Theme:
+- #0d6efd
+-->
