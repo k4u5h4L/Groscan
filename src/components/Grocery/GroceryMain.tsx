@@ -6,10 +6,9 @@ const GroceryMain = () => {
                     <form className="row">
                         <div className="col-6">
                             <select className="form-select form-select-sm bg-primary-light text-white border-0">
-                                <option>Sort by</option>
-                                <option>Price</option>
                                 <option>Name</option>
-                                <option>Rating</option>
+                                <option>Expiry</option>
+                                <option>Quantity</option>
                             </select>
                         </div>
                         <div className="col-6">
@@ -31,19 +30,17 @@ const GroceryMain = () => {
                             <li className="col-12 col-sm-12 col-md-6">
                                 <article className="product-list mb-2">
                                     <a href="#" className="img-wrap">
-                                        <img src="images/items/1.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/green-lettuce-white-surface_144627-45188.jpg" />
                                     </a>
                                     <div className="info-wrap">
                                         <a href="#" className="float-end">
                                             <i className="material-icons md-favorite_border"></i>
                                         </a>
 
-                                        <p className="title">
-                                            Great product name
-                                        </p>
+                                        <p className="title">Lettuce</p>
 
                                         <div className="rating-wrap">
-                                            <ul className="rating-stars">
+                                            {/* <ul className="rating-stars">
                                                 <li
                                                     style={{ width: "100%" }}
                                                     className="stars-active"
@@ -61,13 +58,12 @@ const GroceryMain = () => {
                                                         alt="stars"
                                                     />
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                             <small className="label-rating text-muted">
-                                                9/10
+                                                1 pack(s)
                                             </small>
                                         </div>
-
-                                        <div className="price">$99.50</div>
+                                        <div className="price">2 days left</div>
                                     </div>
                                 </article>
                             </li>
@@ -75,19 +71,17 @@ const GroceryMain = () => {
                             <li className="col-12 col-sm-12 col-md-6">
                                 <article className="product-list mb-2">
                                     <a href="#" className="img-wrap">
-                                        <img src="images/items/2.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/front-view-sliced-fresh-bread_23-2148613522.jpg" />
                                     </a>
                                     <div className="info-wrap">
                                         <a href="#" className="float-end">
                                             <i className="material-icons md-favorite_border"></i>
                                         </a>
 
-                                        <p className="title">
-                                            Product name goes here
-                                        </p>
+                                        <p className="title">Brown Bread</p>
 
                                         <div className="rating-wrap">
-                                            <ul className="rating-stars">
+                                            {/* <ul className="rating-stars">
                                                 <li
                                                     style={{ width: "80%" }}
                                                     className="stars-active"
@@ -105,13 +99,13 @@ const GroceryMain = () => {
                                                         alt="stars"
                                                     />
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                             <small className="label-rating text-muted">
-                                                9/10
+                                                2 pack(s)
                                             </small>
                                         </div>
 
-                                        <div className="price">$72.50</div>
+                                        <div className="price">3 days left</div>
                                     </div>
                                 </article>
                             </li>
@@ -119,19 +113,17 @@ const GroceryMain = () => {
                             <li className="col-12 col-sm-12 col-md-6">
                                 <article className="product-list mb-2">
                                     <a href="#" className="img-wrap">
-                                        <img src="images/items/3.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/green-cucumber_144627-21625.jpg" />
                                     </a>
                                     <div className="info-wrap">
                                         <a href="#" className="float-end">
                                             <i className="material-icons md-favorite_border"></i>
                                         </a>
 
-                                        <p className="title">
-                                            Smartwatch Apple 32GB
-                                        </p>
+                                        <p className="title">Cucumber</p>
 
                                         <div className="rating-wrap">
-                                            <ul className="rating-stars">
+                                            {/* <ul className="rating-stars">
                                                 <li
                                                     style={{ width: "60%" }}
                                                     className="stars-active"
@@ -149,13 +141,13 @@ const GroceryMain = () => {
                                                         alt="stars"
                                                     />
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                             <small className="label-rating text-muted">
-                                                9/10
+                                                2 pack(s)
                                             </small>
                                         </div>
 
-                                        <div className="price">$9.95</div>
+                                        <div className="price">3 days left</div>
                                     </div>
                                 </article>
                             </li>
@@ -163,19 +155,17 @@ const GroceryMain = () => {
                             <li className="col-12 col-sm-12 col-md-6">
                                 <article className="product-list mb-2">
                                     <a href="#" className="img-wrap">
-                                        <img src="images/items/4.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/top-view-delicious-creamy-ice-cream_23-2150796528.jpg" />
                                     </a>
                                     <div className="info-wrap">
                                         <a href="#" className="float-end">
                                             <i className="material-icons md-favorite_border"></i>
                                         </a>
 
-                                        <p className="title">
-                                            Gaming Headset Black
-                                        </p>
+                                        <p className="title">Gelato</p>
 
                                         <div className="rating-wrap">
-                                            <ul className="rating-stars">
+                                            {/* <ul className="rating-stars">
                                                 <li
                                                     style={{ width: "20%" }}
                                                     className="stars-active"
@@ -193,13 +183,15 @@ const GroceryMain = () => {
                                                         alt="stars"
                                                     />
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                             <small className="label-rating text-muted">
-                                                9/10
+                                                3 pack(s)
                                             </small>
                                         </div>
 
-                                        <div className="price">$23.00</div>
+                                        <div className="price">
+                                            10 days left
+                                        </div>
                                     </div>
                                 </article>
                             </li>

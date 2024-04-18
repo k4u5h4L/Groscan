@@ -9,17 +9,17 @@ const CartMain = () => {
                         <figure className="itemside mb-3">
                             <div className="aside">
                                 <img
-                                    src="images/items/1.jpg"
+                                    src="https://img.freepik.com/free-photo/green-lettuce-white-surface_144627-45188.jpg"
                                     className="rounded border img-md"
                                 />
                             </div>
                             <figcaption className="info">
                                 <a href="#" className="title text-truncate">
-                                    Great product name
+                                    Lettuce
                                 </a>
                                 <small className="text-muted">
-                                    Color: red, Capacity: 32 GB <br />
-                                    $34.00 /per item
+                                    {/* Packs: 1 <br /> */}
+                                    Expiry: 2 days
                                 </small>
                             </figcaption>
                         </figure>
@@ -59,12 +59,12 @@ const CartMain = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="col">
+                            {/* <div className="col">
                                 {" "}
                                 <var className="float-end price">
                                     2x = $120.00
                                 </var>
-                            </div>
+                            </div> */}
                         </div>
                     </article>
 
@@ -74,17 +74,16 @@ const CartMain = () => {
                         <figure className="itemside mb-3">
                             <div className="aside">
                                 <img
-                                    src="images/items/2.jpg"
+                                    src="https://img.freepik.com/free-photo/front-view-sliced-fresh-bread_23-2148613522.jpg"
                                     className="rounded border img-md"
                                 />
                             </div>
                             <figcaption className="info">
                                 <a href="#" className="title text-truncate">
-                                    Great product name
+                                    Brown Bread
                                 </a>
                                 <small className="text-muted">
-                                    Color: red, Capacity: 32 GB <br />
-                                    $34.00 /per item
+                                    Expiry: 3 days
                                 </small>
                             </figcaption>
                         </figure>
@@ -124,12 +123,12 @@ const CartMain = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="col">
+                            {/* <div className="col">
                                 {" "}
                                 <var className="float-end price">
                                     2x = $120.00
                                 </var>
-                            </div>
+                            </div> */}
                         </div>
                     </article>
 
@@ -139,17 +138,16 @@ const CartMain = () => {
                         <figure className="itemside mb-3">
                             <div className="aside">
                                 <img
-                                    src="images/items/3.jpg"
+                                    src="https://img.freepik.com/free-photo/green-cucumber_144627-21625.jpg"
                                     className="rounded border img-md"
                                 />
                             </div>
                             <figcaption className="info">
                                 <a href="#" className="title text-truncate">
-                                    Great product name
+                                    Cucumber
                                 </a>
                                 <small className="text-muted">
-                                    Color: red, Capacity: 32 GB <br />
-                                    $34.00 /per item
+                                    Expiry: 3 days
                                 </small>
                             </figcaption>
                         </figure>
@@ -177,7 +175,7 @@ const CartMain = () => {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        value="1"
+                                        value="2"
                                         onChange={() => console.log("changed")}
                                     />
                                     <button
@@ -189,12 +187,12 @@ const CartMain = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div className="col">
+                            {/* <div className="col">
                                 {" "}
                                 <var className="float-end price">
                                     2x = $120.00
                                 </var>
-                            </div>
+                            </div> */}
                         </div>
                     </article>
                 </section>
@@ -203,29 +201,29 @@ const CartMain = () => {
 
                 <section className="padding-around">
                     <dl className="dlist-align">
-                        <dt className="text-muted">Total price:</dt>
-                        <dd className="text-end">$69.97</dd>
+                        <dt className="text-muted">Total items:</dt>
+                        <dd className="text-end">4</dd>
                     </dl>
                     <dl className="dlist-align">
-                        <dt className="text-muted">Shipping:</dt>
-                        <dd className="text-end">$10.00</dd>
+                        <dt className="text-muted">Min Expiry:</dt>
+                        <dd className="text-end">2 days</dd>
                     </dl>
                     <dl className="dlist-align">
                         <dt className="text-muted">
-                            <strong>Total:</strong>
+                            <strong>Recurring?</strong>
                         </dt>
                         <dd className="text-end">
-                            <strong>$59.97</strong>
+                            <strong>No</strong>
                         </dd>
                     </dl>
                     <br />
                     <a href="#" className="btn btn-primary w-100 mb-2">
                         {" "}
-                        Purchase{" "}
+                        Proceed{" "}
                     </a>
                     <a href="index.html" className="btn btn-light w-100">
                         {" "}
-                        Back to shop{" "}
+                        Exit{" "}
                     </a>
                     <br /> <br />
                 </section>

@@ -15,11 +15,11 @@ const HomeMain = () => {
                         >
                             <div className="card-body caption">
                                 <h5 className="card-title mb-3">
-                                    Great offers <br />
-                                    just started now
+                                    Boought something new? Yay! <br />
+                                    Add it to your inventory
                                 </h5>
                                 <a href="#" className="btn btn-sm btn-warning">
-                                    Discover
+                                    Add
                                 </a>
                             </div>
                         </article>
@@ -34,11 +34,11 @@ const HomeMain = () => {
                         >
                             <div className="card-body caption">
                                 <h5 className="card-title mb-3">
-                                    Super deals <br />
-                                    Just started now
+                                    Consumed something? <br />
+                                    Just mark it as consumed
                                 </h5>
                                 <a href="#" className="btn btn-sm btn-warning">
-                                    Ler more
+                                    I&apos;ve eaten it!
                                 </a>
                             </div>
                         </article>
@@ -67,41 +67,41 @@ const HomeMain = () => {
                 <HomeCategory />
 
                 <section>
-                    <h5 className="title-section">New arrival</h5>
+                    <h5 className="title-section">Newly Added</h5>
                     <div className="p-3 scroll-horizontal">
                         <div className="item">
                             <a href="#" className="product">
                                 <div className="img-wrap">
-                                    <img src="images/items/1.jpg" />
+                                    <img src="https://img.freepik.com/free-photo/green-lettuce-white-surface_144627-45188.jpg" />
                                 </div>
                                 <div className="text-wrap">
-                                    <div className="price">$13.90</div>
+                                    <div className="price">2 days left</div>
 
-                                    <p className="title">Great item name</p>
+                                    <p className="title">Lettuce</p>
                                 </div>
                             </a>
                         </div>
                         <div className="item">
                             <a href="#" className="product">
                                 <div className="img-wrap">
-                                    <img src="images/items/2.jpg" />
+                                    <img src="https://img.freepik.com/free-photo/front-view-sliced-fresh-bread_23-2148613522.jpg" />
                                 </div>
                                 <div className="text-wrap">
-                                    <div className="price">$90.80</div>
+                                    <div className="price">3 days left</div>
 
-                                    <p className="title">Product name</p>
+                                    <p className="title">Brown Bread</p>
                                 </div>
                             </a>
                         </div>
                         <div className="item">
                             <a href="#" className="product">
                                 <div className="img-wrap">
-                                    <img src="images/items/3.jpg" />
+                                    <img src="https://img.freepik.com/free-photo/green-cucumber_144627-21625.jpg" />
                                 </div>
                                 <div className="text-wrap">
-                                    <div className="price">$63.00</div>
+                                    <div className="price">3 days left</div>
 
-                                    <p className="title">Great item name</p>
+                                    <p className="title">Cucumber</p>
                                 </div>
                             </a>
                         </div>
