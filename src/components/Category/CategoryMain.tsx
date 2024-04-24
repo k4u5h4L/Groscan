@@ -16,15 +16,13 @@ const CategoryMain = () => {
                             <a href="" className="icontext">
                                 <span className="icon icon-sm rounded">
                                     <img
-                                        src="images/icons/category-blue/cpu.svg"
+                                        src="/images/icons/category/vegetable.svg"
                                         alt=""
                                     />
                                 </span>
                                 <div className="text">
-                                    <h6 className="title">Electronic items</h6>
-                                    <span className="text-muted">
-                                        234 items
-                                    </span>
+                                    <h6 className="title">Vegetables</h6>
+                                    <span className="text-muted">2 items</span>
                                 </div>
                             </a>
                         </li>
@@ -32,15 +30,13 @@ const CategoryMain = () => {
                             <a href="" className="icontext">
                                 <span className="icon icon-sm rounded">
                                     <img
-                                        src="images/icons/category-blue/homeitem.svg"
+                                        src="/images/icons/category/leaves.svg"
                                         alt=""
                                     />
                                 </span>
                                 <div className="text">
-                                    <h6 className="title">Home equipments</h6>
-                                    <span className="text-muted">
-                                        354 items
-                                    </span>
+                                    <h6 className="title">Leaves</h6>
+                                    <span className="text-muted">1 item</span>
                                 </div>
                             </a>
                         </li>
@@ -48,190 +44,26 @@ const CategoryMain = () => {
                             <a href="" className="icontext">
                                 <span className="icon icon-sm rounded">
                                     <img
-                                        src="images/icons/category-blue/book.svg"
+                                        src="/images/icons/category/ice-cream.svg"
                                         alt=""
                                     />
                                 </span>
                                 <div className="text">
-                                    <h6 className="title">
-                                        Books and magazines
-                                    </h6>
-                                    <span className="text-muted">48 items</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/ball.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Sport and outdoor</h6>
-                                    <span className="text-muted">97 items</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/shoe-lady.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Shoes for women</h6>
-                                    <span className="text-muted">
-                                        234 items
-                                    </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/shirt.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Shirts for men</h6>
-                                    <span className="text-muted">
-                                        354 items
-                                    </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/toy.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Toys and kids</h6>
-                                    <span className="text-muted">48 items</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/watch.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Accessories</h6>
-                                    <span className="text-muted">97 items</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/bag.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Handbags for men</h6>
-                                    <span className="text-muted">
-                                        354 items
-                                    </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/diamond.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Jewelleries</h6>
-                                    <span className="text-muted">98 items</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/watch.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Accessories</h6>
-                                    <span className="text-muted">97 items</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/shirt.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Shirts for men</h6>
-                                    <span className="text-muted">
-                                        354 items
-                                    </span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/toy.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Toys and kids</h6>
-                                    <span className="text-muted">48 items</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="icontext">
-                                <span className="icon icon-sm rounded">
-                                    <img
-                                        src="images/icons/category-blue/more.svg"
-                                        alt=""
-                                    />
-                                </span>
-                                <div className="text">
-                                    <h6 className="title">Other items</h6>
-                                    <span className="text-muted">10 items</span>
+                                    <h6 className="title">Ice cream</h6>
+                                    <span className="text-muted">1 item</span>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </section>
 
-                <p className="text-center mx-3">
+                {/* <p className="text-center mx-3">
                     <a href="index.html" className="btn w-100 btn-light">
                         <i className="material-icons md-arrow_back"></i> More
                         pages
                     </a>
                 </p>
-                <br />
+                <br /> */}
             </main>
         </>
     );

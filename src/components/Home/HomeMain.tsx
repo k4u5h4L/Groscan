@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HomeCategory from "../containers/Home/HomeCategory/HomeCategory";
 
 const HomeMain = () => {
@@ -29,6 +30,27 @@ const HomeMain = () => {
                             className="card card-banner"
                             style={{
                                 height: "160px",
+                                backgroundImage: `url('images/banners/banner-cat1.jpg')`,
+                            }}
+                        >
+                            <div className="card-body caption">
+                                <h5 className="card-title mb-3">
+                                    Don&apos;t know what to do with your
+                                    groceries?
+                                    <br />
+                                    Ask our AI
+                                </h5>
+                                <a href="#" className="btn btn-sm btn-warning">
+                                    Let&apos;s chat!
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <div className="item-lg">
+                        <article
+                            className="card card-banner"
+                            style={{
+                                height: "160px",
                                 backgroundImage: `url('images/banners/banner2.jpg')`,
                             }}
                         >
@@ -39,25 +61,6 @@ const HomeMain = () => {
                                 </h5>
                                 <a href="#" className="btn btn-sm btn-warning">
                                     I&apos;ve eaten it!
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                    <div className="item-lg">
-                        <article
-                            className="card card-banner"
-                            style={{
-                                height: "160px",
-                                backgroundImage: `url('images/banners/banner3.jpg')`,
-                            }}
-                        >
-                            <div className="card-body caption">
-                                <h5 className="card-title mb-3">
-                                    Great deals <br />
-                                    is starting now
-                                </h5>
-                                <a href="#" className="btn btn-sm btn-warning">
-                                    Get now
                                 </a>
                             </div>
                         </article>
@@ -105,54 +108,6 @@ const HomeMain = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className="item">
-                            <a href="#" className="product">
-                                <div className="img-wrap">
-                                    <img src="images/items/4.jpg" />
-                                </div>
-                                <div className="text-wrap">
-                                    <div className="price">$9.50</div>
-
-                                    <p className="title">Product name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="item">
-                            <a href="#" className="product">
-                                <div className="img-wrap">
-                                    <img src="images/items/5.jpg" />
-                                </div>
-                                <div className="text-wrap">
-                                    <div className="price">$63.00</div>
-
-                                    <p className="title">Great item name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="item">
-                            <a href="#" className="product">
-                                <div className="img-wrap">
-                                    <img src="images/items/6.jpg" />
-                                </div>
-                                <div className="text-wrap">
-                                    <div className="price">$63.00</div>
-
-                                    <p className="title">Product name</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="item">
-                            <a href="#" className="product">
-                                <div className="img-wrap">
-                                    <img src="images/items/7.jpg" />
-                                </div>
-                                <div className="text-wrap">
-                                    <div className="price">$63.00</div>
-
-                                    <p className="title">Great item name</p>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </section>
 
@@ -166,13 +121,13 @@ const HomeMain = () => {
                             <li className="col-6 col-sm-4 col-md-3">
                                 <a href="#" className="product mb-3">
                                     <div className="img-wrap">
-                                        <img src="images/items/3.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/green-lettuce-white-surface_144627-45188.jpg" />
                                     </div>
                                     <div className="text-wrap">
-                                        <div className="price">$17.00</div>
+                                        <div className="price">2 days left</div>
 
                                         <p className="title text-truncate">
-                                            Amazing item name
+                                            Lettuce
                                         </p>
                                     </div>
                                 </a>
@@ -181,13 +136,13 @@ const HomeMain = () => {
                             <li className="col-6 col-sm-4 col-md-3">
                                 <a href="#" className="product mb-3">
                                     <div className="img-wrap">
-                                        <img src="images/items/2.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/front-view-sliced-fresh-bread_23-2148613522.jpg" />
                                     </div>
                                     <div className="text-wrap">
-                                        <div className="price">$17.00</div>
+                                        <div className="price">3 days left</div>
 
                                         <p className="title text-truncate">
-                                            Great product name is just here
+                                            Brown Bread
                                         </p>
                                     </div>
                                 </a>
@@ -196,13 +151,13 @@ const HomeMain = () => {
                             <li className="col-6 col-sm-4 col-md-3">
                                 <a href="#" className="product mb-3">
                                     <div className="img-wrap">
-                                        <img src="images/items/1.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/green-cucumber_144627-21625.jpg" />
                                     </div>
                                     <div className="text-wrap">
-                                        <div className="price">$17.00</div>
+                                        <div className="price">3 days left</div>
 
                                         <p className="title text-truncate">
-                                            Great product name is here
+                                            Cucumber
                                         </p>
                                     </div>
                                 </a>
@@ -211,73 +166,15 @@ const HomeMain = () => {
                             <li className="col-6 col-sm-4 col-md-3">
                                 <a href="#" className="product mb-3">
                                     <div className="img-wrap">
-                                        <img src="images/items/2.jpg" />
+                                        <img src="https://img.freepik.com/free-photo/top-view-delicious-creamy-ice-cream_23-2150796528.jpg" />
                                     </div>
                                     <div className="text-wrap">
-                                        <div className="price">$17.00</div>
+                                        <div className="price">
+                                            10 days left
+                                        </div>
 
                                         <p className="title text-truncate">
-                                            Name of the item
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li className="col-6 col-sm-4 col-md-3">
-                                <a href="#" className="product mb-3">
-                                    <div className="img-wrap">
-                                        <img src="images/items/3.jpg" />
-                                    </div>
-                                    <div className="text-wrap">
-                                        <div className="price">$17.00</div>
-
-                                        <p className="title text-truncate">
-                                            Produt name
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li className="col-6 col-sm-4 col-md-3">
-                                <a href="#" className="product mb-3">
-                                    <div className="img-wrap">
-                                        <img src="images/items/4.jpg" />
-                                    </div>
-                                    <div className="text-wrap">
-                                        <div className="price">$17.00</div>
-
-                                        <p className="title text-truncate">
-                                            Great product name
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li className="col-6 col-sm-4 col-md-3">
-                                <a href="#" className="product mb-3">
-                                    <div className="img-wrap">
-                                        <img src="images/items/5.jpg" />
-                                    </div>
-                                    <div className="text-wrap">
-                                        <div className="price">$17.00</div>
-
-                                        <p className="title text-truncate">
-                                            Name of the item
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li className="col-6 col-sm-4 col-md-3">
-                                <a href="#" className="product mb-3">
-                                    <div className="img-wrap">
-                                        <img src="images/items/6.jpg" />
-                                    </div>
-                                    <div className="text-wrap">
-                                        <div className="price">$17.00</div>
-
-                                        <p className="title text-truncate">
-                                            Great product nam
+                                            Gelato
                                         </p>
                                     </div>
                                 </a>
@@ -287,10 +184,10 @@ const HomeMain = () => {
                 </section>
 
                 <p className="text-center mx-3">
-                    <a href="index.html" className="btn w-100 btn-light">
-                        <i className="material-icons md-arrow_back"></i>
-                        All pages
-                    </a>
+                    <Link href="/grocery" className="btn w-100 btn-light">
+                        <i className="material-icons md-local_grocery_store"></i>{" "}
+                        All groceries
+                    </Link>
                 </p>
                 <br />
             </main>

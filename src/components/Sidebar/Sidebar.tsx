@@ -1,4 +1,5 @@
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
+import Link from "next/link";
 
 const Sidebar = () => {
     const { data: session, status } = useSession();
@@ -23,7 +24,7 @@ const Sidebar = () => {
                         aria-label="Close"
                     ></button>
 
-                    <a href="#" className="icontext">
+                    <Link href="/profile" className="icontext">
                         <img
                             src={session.user.image ?? ""}
                             className="icon avatar-sm"
@@ -33,24 +34,25 @@ const Sidebar = () => {
                             <h6 className="mb-0">Hi, {session.user.name}</h6>
                             <small>My profile</small>
                         </div>
-                    </a>
+                    </Link>
                 </header>
                 <article className="offcanvas-body">
                     <nav className="nav-sidebar mt-2">
-                        <a href="index.html">
-                            <i className="material-icons md-apps"></i> All pages
-                        </a>
-                        <a href="#">
+                        <Link href="/">
+                            <i className="material-icons md-apps"></i> Home
+                        </Link>
+                        <Link href="/grocery">
                             <i className="material-icons md-local_offer"></i>{" "}
-                            New offers
-                        </a>
-                        <a href="#">
-                            <i className="material-icons md-store"></i>{" "}
-                            Wholsesalers
-                        </a>
+                            All groceries
+                        </Link>
+                        <Link href="/category">
+                            <i className="material-icons md-store"></i> All
+                            categories
+                        </Link>
                         <hr />
                         <a href="#">
-                            <i className="material-icons md-info"></i> About us
+                            <i className="material-icons md-info"></i> About
+                            Groscan
                         </a>
                         <a href="#">
                             <i className="material-icons md-chat"></i> Help
@@ -58,20 +60,23 @@ const Sidebar = () => {
                         </a>
                         <a href="#">
                             <i className="material-icons md-local_police"></i>{" "}
-                            Services
+                            AI Services
                         </a>
                         <hr />
-                        <a href="#">
+                        <Link href="/profile">
                             <i className="material-icons md-account_circle"></i>{" "}
                             Profile
-                        </a>
-                        <a href="#">
-                            <i className="material-icons md-settings"></i>{" "}
-                            Settings
-                        </a>
-                        <a href="#">
+                        </Link>
+                        <Link href="/login">
+                            <i className="material-icons md-verified_user"></i>{" "}
+                            Check session
+                        </Link>
+                        <a
+                            style={{ cursor: "pointer" }}
+                            onClick={() => signOut()}
+                        >
                             <i className="material-icons md-local_shipping"></i>{" "}
-                            My orders
+                            Logout
                         </a>
                     </nav>
                 </article>

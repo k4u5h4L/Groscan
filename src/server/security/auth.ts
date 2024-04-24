@@ -44,6 +44,9 @@ export const authOptions: NextAuthOptions = {
                 id: user.id,
             },
         }),
+        async redirect({ url, baseUrl }) {
+            return "/";
+        },
     },
     adapter: PrismaAdapter(prisma),
     // debug: env.NODE_ENV === "development",
