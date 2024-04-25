@@ -3,6 +3,7 @@ import { Test } from "./objectTypes/Test";
 import { healthCheckMutationResolver } from "../resolvers/HealthCheckResolver";
 import { Grocery } from "./objectTypes";
 import { addGroceryResolver } from "../resolvers/Grocery/AddGroceryResolver";
+import { consumeGroceryResolver } from "../resolvers/Grocery/ConsumeGroceryResolver";
 
 export const Mutation = mutationType({
     definition(t) {
@@ -25,6 +26,15 @@ export const Mutation = mutationType({
                 expiry: nonNull(stringArg()),
             },
             resolve: addGroceryResolver,
+        });
+
+        t.field("consumeGrocery", {
+            type: Grocery,
+            description: "Mark the grocery as consumed.",
+            args: {
+                groceryId: nonNull(stringArg()),
+            },
+            resolve: consumeGroceryResolver,
         });
     },
 });
