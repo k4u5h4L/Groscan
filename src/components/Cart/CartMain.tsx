@@ -213,17 +213,20 @@ const CartMain = () => {
                             <strong>Recurring?</strong>
                         </dt>
                         <dd className="text-end">
-                            <strong>No</strong>
+                            <strong>No (feature soon to come!)</strong>
                         </dd>
                     </dl>
                     <br />
+                    <a
+                        style={{ cursor: "pointer" }}
+                        className="btn btn-light w-100"
+                    >
+                        {" "}
+                        Scan more{" "}
+                    </a>
                     <a href="#" className="btn btn-primary w-100 mb-2">
                         {" "}
                         Proceed{" "}
-                    </a>
-                    <a href="index.html" className="btn btn-light w-100">
-                        {" "}
-                        Exit{" "}
                     </a>
                     <br /> <br />
                 </section>
